@@ -1,4 +1,4 @@
-public class decepticon extends transformer{
+public class decepticon extends transformer implements action {
     protected String teamName;
     protected final String eyeColor = "red";
     protected boolean kindness;
@@ -10,18 +10,30 @@ public class decepticon extends transformer{
     }
 
     public void transform() {
-        System.out.println(name + " transforms into ground, air transport, weapon or equipment");
+        System.out.println(this.name + " transforms into ground, air transport, weapon or equipment");
+    }
+
+    public void fire() {
+        System.out.println(this.name + " is firing");
+    }
+
+    public void charge() {
+        System.out.println(this.name + " is charging");
     }
 
     public String getEyeColor() {
-        return eyeColor;
+        return "red";
     }
 
     public boolean isKindness() {
-        return kindness;
+        return this.kindness;
     }
 
     public String getTeamName() {
-        return teamName;
+        return this.teamName;
+    }
+
+    public String toString() {
+        return "Decepticon: " + this.name;
     }
 }

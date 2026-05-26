@@ -1,4 +1,4 @@
-public class autobot extends transformer {
+public class autobot extends transformer implements action {
     protected String teamName;
     protected final String eyeColor = "blue";
     protected boolean kindness;
@@ -10,18 +10,30 @@ public class autobot extends transformer {
     }
 
     public void transform() {
-        System.out.println(name + " transforms into a vehicle");
+        System.out.println(this.name + " transforms into a vehicle");
+    }
+
+    public void fire() {
+        System.out.println(this.name + " is firing");
+    }
+
+    public void charge() {
+        System.out.println(this.name + " is charging");
     }
 
     public String getEyeColor() {
-        return eyeColor;
+        return "blue";
     }
 
     public boolean isKindness() {
-        return kindness;
+        return this.kindness;
     }
 
     public String getTeamName() {
-        return teamName;
+        return this.teamName;
+    }
+
+    public String toString() {
+        return "Autobot: " + this.name;
     }
 }
