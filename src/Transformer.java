@@ -1,7 +1,7 @@
-public class transformer {
-    protected String name;
+public class Transformer {
+    private String name;
 
-    public transformer(String name) {
+    public Transformer(String name) {
         this.name = name;
     }
 
@@ -16,4 +16,9 @@ public class transformer {
     public void charge() {
         System.out.println(name + " is charging");
     }
+
+    public String getName(){return name;}
+
+    public void setName(String name) {this.name = name;}
+
 }

@@ -1,10 +1,10 @@
 public class Main {
     public static void main(String[] args) {
 
-        autobot optimusPrime = new autobot("Optimus Prime", "Autobots");
-        decepticon megatron = new decepticon("Megatron", "Decepticons");
+        Autobot optimusPrime = new Autobot("Optimus Prime", "Autobots");
+        Decepticon megatron = new Decepticon("Megatron", "Decepticons");
 
-        System.out.println("=== Autobot: " + optimusPrime.name + " ===");
+        System.out.println("=== Autobot: " + optimusPrime.getName() + " ===");
         System.out.println("Team: " + optimusPrime.getTeamName());
         System.out.println("Eye color: " + optimusPrime.getEyeColor());
         System.out.println("Kindness: " + optimusPrime.isKindness());
@@ -13,7 +13,7 @@ public class Main {
         optimusPrime.charge();
         optimusPrime.transform();
 
-        System.out.println("\n=== Decepticon: " + megatron.name + " ===");
+        System.out.println("\n=== Decepticon: " + megatron.getName() + " ===");
         System.out.println("Team: " + megatron.getTeamName());
         System.out.println("Eye color: " + megatron.getEyeColor());
         System.out.println("Kindness: " + megatron.isKindness());
