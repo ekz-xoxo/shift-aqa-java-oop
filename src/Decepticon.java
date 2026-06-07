@@ -5,8 +5,8 @@ public class Decepticon extends Transformer {
 
     public Decepticon(String name, String teamName) {
         super(name);
-        setTeamName(teamName);
-        setKindness("false");
+        this.teamName=teamName;
+        this.kindness = false;
     }
 
     public void transform() { System.out.println(getName() + " transforms into ground, air transport, weapon or equipment");}
@@ -19,7 +19,7 @@ public class Decepticon extends Transformer {
         return kindness;
     }
 
-    public void setKindness(String kindness) {this.kindness = Boolean.parseBoolean(kindness);}
+    public void setKindness(Boolean kindness) {this.kindness = kindness;}
 
     public String getTeamName() {
         return teamName;

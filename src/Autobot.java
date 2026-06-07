@@ -5,8 +5,8 @@ public class Autobot extends Transformer {
 
     public Autobot(String name, String teamName) {
         super(name);
-        setTeamName(teamName);
-        setKindness("true");
+        this.teamName=teamName;;
+        this.kindness = true;;
     }
 
     public void transform() {
@@ -21,7 +21,7 @@ public class Autobot extends Transformer {
         return kindness;
     }
 
-    public void setKindness(String kindness) {this.kindness = Boolean.parseBoolean(kindness);}
+    public void setKindness(Boolean kindness) {this.kindness = kindness;}
 
     public String getTeamName() {
         return teamName;
