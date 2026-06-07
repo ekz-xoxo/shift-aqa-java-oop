@@ -5,18 +5,21 @@ public class Decepticon extends Transformer implements Action {
 
     public Decepticon(String name, String teamName) {
         super(name);
-        setTeamName(teamName);
-        setKindness("false");
+        this.teamName = teamName;
+        this.kindness = false;
     }
 
+    @Override
     public void transform() {
         System.out.println(getName() + " transforms into ground, air transport, weapon or equipment");
     }
 
+    @Override
     public void fire() {
         System.out.println(getName() + " is firing");
     }
 
+    @Override
     public void charge() {
         System.out.println(getName()+ " is charging");
     }
@@ -33,8 +36,8 @@ public class Decepticon extends Transformer implements Action {
         return this.teamName;
     }
 
-    public void setKindness(String kindness) {
-        this.kindness = Boolean.parseBoolean(kindness);
+    public void setKindness(Boolean kindness) {
+        this.kindness = kindness;
     }
 
     public void setTeamName(String teamName) {

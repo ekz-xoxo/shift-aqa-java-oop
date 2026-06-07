@@ -4,7 +4,6 @@ public interface Action {
         System.out.println("Running...");
     }
 
-
     void fire();
 
     void charge();
